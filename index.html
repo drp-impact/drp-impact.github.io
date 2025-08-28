@@ -58,15 +58,16 @@
 </head>
 
 <section class="hero is-link is-fullheight video" style="overflow: hidden; position:relative;">
-  <div class="hero-video" style="height: 100%; width: 177.77777778vh; min-width: 100%;min-height: 56.25vw;">
+
+  <div class="hero-video is-hidden-mobile" style="height: 100%; width: 177.77777778vh; min-width: 100%;min-height: 56.25vw;">
     <video playsinline autoplay muted loop>
       <source src=" ./static/videos/teaser.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="hero-video is-hidden-tablet is-inline-block-mobile"
-    style="height: 154.28571428vw; width: 100%; min-width:64.81481481vh;min-height:100%;">
+  <div class="hero-video is-hidden-tablet is-inline-block-mobile" style="height: 154.28571428vw; width: 100%; min-width:64.81481481vh;min-height:100%;">
+
     <video playsinline autoplay muted loop>
-      <source src=" ./static/videos/teaser.mp4" type="video/mp4">
+      <source src=" ./static/videos/teaser_mobile.mp4" type="video/mp4">
     </video>
   </div>
   <div class="overlay"></div>
@@ -76,22 +77,22 @@
       <div class="container is-size-5">
         <div class="navbar-menu">
           <div class="navbar-end">
-            <a class="navbar-item pl-4 pr-4">
+            <!-- <a class="navbar-item pl-4 pr-4">
               <span class="icon" style="margin-right:5px;">
                 <img src="./static/images/pdf.svg" alt="PDF" />
               </span>
               <span>Paper</span>
-            </a>
+            </a> -->
             <a class="navbar-item  pl-4 pr-4">
               <span class="icon" style="margin-right:5px;">
                 <img src="./static/images/arxiv.svg" alt="ArXiv" />
               </span>
               <span>arXiv</span> </a>
-            <a class="navbar-item  pl-4 pr-4">
+            <!-- <a class="navbar-item  pl-4 pr-4">
               <span class="icon" style="margin-right:5px;">
                 <img src="./static/images/youtube.svg" alt="Youtube" />
               </span>
-              <span>Video</span> </a>
+              <span>Video</span> </a> -->
             <span class="navbar-item  pl-4 pr-4">
               <a class="button is-inverted is-large">
                 <span class="icon">
@@ -115,20 +116,28 @@
       <h1 class="subtitle is-1 publication-title is-size-4-mobile" style="font-size: 4rem;">
         Learning Reactive Manipulator Motion Planning <br class="is-hidden-mobile">for Dynamic Environments
       </h1>
-      <h1 class="is-2 is-italic is-size-4-mobile" style="font-size: 2rem; opacity: 80%;">
+      <!-- <h1 class="is-2 is-italic is-size-4-mobile" style="font-size: 2rem; opacity: 80%;">
         In submission
-      </h1>
+      </h1> -->
+      <span class="author-block has-text-white is-size-6-mobile is-size-3-tablet is-size-3-desktop">
+          <u><a href="https://jim-young6709.github.io/">Jiahui Yang*</a></u>&nbsp;&nbsp;
+          <u><a href="https://jasonjzliu.com/">Jason Jingzhou Liu*</a></u>&nbsp;&nbsp;
+          <u><a href="https://www.linkedin.com/in/youssefkhaky/">Youssef Khaky</a></u>&nbsp;&nbsp;
+          <u><a href="https://kennyshaw.net/">Kenneth Shaw</a></u>&nbsp;&nbsp;
+          <u><a href="https://www.cs.cmu.edu/~dpathak/">Deepak Pathak</a></u>
+        </span>
+
       <div class="column has-text-centered is-hidden-tablet">
         <div class="publication-links">
           <!-- PDF Link. -->
-          <span class="link-block">
+          <!-- <span class="link-block">
             <a class="external-link button is-normal is-rounded is-dark">
               <span class="icon">
                 <img src="./static/images/pdf.svg" alt="PDF" />
               </span>
               <span>Paper</span>
             </a>
-          </span>
+          </span> -->
           <span class="link-block">
             <a class="external-link button is-normal is-rounded is-dark">
               <span class="icon">
@@ -138,14 +147,14 @@
             </a>
           </span>
           <!-- Video Link. -->
-          <span class="link-block">
+          <!-- <span class="link-block">
             <a href="" class="external-link button is-normal is-rounded is-dark">
               <span class="icon">
                 <img src="./static/images/youtube.svg" alt="Youtube" />
               </span>
               <span>Video</span>
             </a>
-          </span>
+          </span> -->
           <!-- Code Link. -->
           <span class="link-block">
             <a class="external-link button is-normal is-rounded is-dark">
@@ -177,68 +186,6 @@
   </div>
 </section>
 
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay muted loop controls height="100%">
-            <source src="./static/videos/big_shelf compressed.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay muted loop controls height="100%">
-            <source src="./static/videos/big_shelf compressed.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay muted loop controls height="100%">
-            <source src="./static/videos/big_shelf compressed.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay muted loop controls height="100%">
-            <source src="./static/videos/big_shelf compressed.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay muted loop controls height="100%">
-            <source src="./static/videos/big_shelf compressed.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay muted loop controls height="100%">
-            <source src="./static/videos/big_shelf compressed.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay muted loop controls height="100%">
-            <source src="./static/videos/big_shelf compressed.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay muted loop controls height="100%">
-            <source src="./static/videos/big_shelf compressed.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay muted loop controls height="100%">
-            <source src="./static/videos/big_shelf compressed.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 <section class="section">
   <div class="container">
@@ -291,7 +238,7 @@
             <div class="columns">
               <div class="column">
                 <video class="center" playsinline autoplay loop controls muted src="./static/videos/highlight/fridge.mp4" width="100%" style="border-radius:10px;"></video>
-                <p style="text-align: center; font-size: 18px">Defrosting Food</p>
+                <p style="text-align: center; font-size: 18px">Fridge Rearrangement</p>
               </div>
               <div class="column">
                 <video class="center" playsinline autoplay loop controls muted src="./static/videos/highlight/drawer_combined.mp4" width="100%" style="border-radius:10px;"></video>
@@ -309,11 +256,11 @@
               </div>
               <div class="column">
                 <video class="center" playsinline autoplay loop controls muted src="./static/videos/highlight/trash.mp4" width="100%" style="border-radius:10px;"></video>
-                <p style="text-align: center; font-size: 18px">Refuse Disposal</p>
+                <p style="text-align: center; font-size: 18px">Garbage Cleanup</p>
               </div>
               <div class="column">
                 <video class="center" playsinline autoplay loop controls muted src="./static/videos/highlight/sink.mp4" width="100%" style="border-radius:10px;"></video>
-                <p style="text-align: center; font-size: 18px">Washing Dishes</p>
+                <p style="text-align: center; font-size: 18px">Kitchen Sink</p>
               </div>
             </div>
       </div>
@@ -979,21 +926,47 @@
   </div>
 </section>
 
-<footer class="footer">
-  <div class="container">
+
+<section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+@inproceedings{yang2025deep,
+  title={Deep Reactive Policy: Learning Reactive Manipulator Motion Planning for Dynamic Environments},
+  author={Jiahui Yang and Jason Jingzhou Liu and Yulong Li and Youssef Khaky and Deepak Pathak},
+  booktitle={9th Annual Conference on Robot Learning},
+  year={2025},
+  url={https://deep-reactive-policy.com}
+}
+</code></pre>
+  </div>
+</section>
+
+<section class="section" id="Ack">
+  <div class="container content">
+    <h2 class="title">Acknowledgements</h2>
+We thank Murtaza Dalal, Ritvik Singh, Arthur Allshire, Tal Daniel, Zheyuan Hu, Mohan Kumar
+Srirama, and Ruslan Salakhutdinov for their valuable discussions on this work. We are grateful to
+Karl Van Wyk and Nathan Ratliff for contributing ideas and implementations of Geometric Fabrics
+used in this project. We also thank Murtaza Dalal for his feedback on the early ideations of this paper.
+In addition, we thank Tiffany Tse, Sheqi Zhang, Hengkai Pan, Andrew Wang, Tony Tao, and Sungjae
+Park for their assistance with experiments.
+</div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container content ">
     <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p> Website borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a 
+    <p> Website borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a 
               href="https://umi-on-legs.github.io">UMI on Legs</a>
               under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">
               Creative Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+   </div>
+</div>
+
+</section>
+
 
 
 <script>
