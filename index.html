@@ -335,149 +335,152 @@
             </div>
       </div>
     </div>
-    <button onclick="toggleVideosSim()" id="expand-btn">Click for detailed simulation evaluation results</button>
-    <script>
-      function toggleVideosSim() {
-        const extra = document.getElementById('extra-videos');
-        const btn = document.getElementById('expand-btn');
-        const isHidden = extra.style.display === 'none';
-  
-        extra.style.display = isHidden ? 'block' : 'none';
-        btn.textContent = isHidden ? 'Click to hide simulation evaluation results' : 'Click for detailed simulation evaluation results';
-      }
-    </script>
-    <div id="extra-videos" style="display: none;">
-      <!-- <hr> -->
 
-      <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>DRP on Static Environments</strong></h3>
-      <h4 style="text-align: center; font-size: 20px; padding-bottom: 20px">These scenarios feature challenging fixed obstacles, evaluating policies performance in predictable, unchanging settings.</h4>
-      <div class="columns">
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/se/shelf.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Shelf</p>
+    <div class="is-hidden-mobile">
+      <button onclick="toggleVideosSim()" id="expand-btn">Click for detailed simulation evaluation results</button>
+      <script>
+        function toggleVideosSim() {
+          const extra = document.getElementById('extra-videos');
+          const btn = document.getElementById('expand-btn');
+          const isHidden = extra.style.display === 'none';
+    
+          extra.style.display = isHidden ? 'block' : 'none';
+          btn.textContent = isHidden ? 'Click to hide simulation evaluation results' : 'Click for detailed simulation evaluation results';
+        }
+      </script>
+      <div id="extra-videos" style="display: none;">
+        <!-- <hr> -->
+
+        <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>DRP on Static Environments</strong></h3>
+        <h4 style="text-align: center; font-size: 20px; padding-bottom: 20px">These scenarios feature challenging fixed obstacles, evaluating policies performance in predictable, unchanging settings.</h4>
+        <div class="columns">
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/se/shelf.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Shelf</p>
+          </div>
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/se/dishwasher.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Dishwasher</p>
+          </div>
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/se/cubby.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Cubby</p>
+          </div>
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/se/box.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Box</p>
+          </div>
         </div>
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/se/dishwasher.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Dishwasher</p>
+
+        <div class="columns">
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/se/cage.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Cage</p>
+          </div>
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/se/hybrid.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Hybrid</p>
+          </div>
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/se/microwave.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Microwave</p>
+          </div>
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/se/wallcabinet.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">wallcabinet</p>
+          </div>
         </div>
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/se/cubby.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Cubby</p>
+
+        <div class="column" style="padding-top: 0px; padding-bottom: 30px">
+          <p style="text-align: center; font-size: 20px">Success Rate: <strong>DRP 84.6%</strong> | NeuralMP 50.59% | cuRobo 82.97%</p>
         </div>
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/se/box.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Box</p>
+
+
+
+        <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>DRP on Suddenly Appearing Obstacle</strong></h3>
+        <h4 style="text-align: center; font-size: 20px; padding-bottom: 20px">Obstacles appear suddenly ahead of the robot, directly blocking its path and requiring dynamic trajectory adaptation. This tests the policy's ability to react to unexpected changes in the environment.</h4>
+        <div class="columns">
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/sao/final_sao_tabletop.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Level 1</p>
+          </div>
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/sao/final_sao_box.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Level 2</p>
+          </div>
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/sao/final_sao_hybrid.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Level 3</p>
+          </div>
         </div>
+        <div class="column" style="padding-top: 0px; padding-bottom: 30px">
+          <p style="text-align: center; font-size: 20px">Success Rate: <strong>DRP 86%</strong> | NeuralMP 33.16% | cuRobo 59%</p>
+        </div>
+
+
+
+        <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>DRP on Goal Blocking</strong></h3>
+        <h4 style="text-align: center; font-size: 20px; padding-bottom: 20px">The goal is temporarily obstructed by an obstacle, and the robot must approach as closely as possible without colliding.</h4>
+        <div class="columns">
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/gb/final_gb_level1.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Level 1</p>
+          </div>
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/gb/final_gb_level2.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Level 2</p>
+          </div>
+        </div>
+        <div class="column" style="padding-top: 0px; padding-bottom: 30px">
+          <p style="text-align: center; font-size: 20px">Success Rate: <strong>DRP 66.67%</strong> | NeuralMP 0% | cuRobo 0%</p>
+        </div>
+
+
+
+        <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>DRP on Dynamic Goal Blocking</strong></h3>
+        <h4 style="text-align: center; font-size: 20px; padding-bottom: 20px">After reaching the goal, the robot encounters a moving obstacle and must avoid it before safely returning to the goal, testing its ability to remain reactive even after task completion.</h4>
+        <div class="columns">
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/dgb/final_dgb_level1.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Level 1</p>
+          </div>
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/dgb/final_dgb_level2.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Level 2</p>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/dgb/final_dgb_level3.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Level 3</p>
+          </div>
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/dgb/final_dgb_level4.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Level 4</p>
+          </div>
+        </div>
+        <div class="column" style="padding-top: 0px; padding-bottom: 30px">
+          <p style="text-align: center; font-size: 20px">Success Rate: <strong>DRP 65.25%</strong> | NeuralMP 0.25% | cuRobo 3%</p>
+        </div>
+
+
+        <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>DRP on Floating Dynamic Obstacle</strong></h3>
+        <h4 style="text-align: center; font-size: 20px; padding-bottom: 20px">Obstacles move randomly throughout the environment, challenging the robot's reactivity and its ability to avoid collisions in real time.</h4>
+        <div class="columns">
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/fdo/final_fdo_level1_3obj.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Level 1</p>
+          </div>
+          <div class="column">
+            <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/fdo/final_fdo_level2_3obj.mp4" width="100%" style="border-radius:10px;"></video>
+            <p style="text-align: center; font-size: 18px">Level 2</p>
+          </div>
+        </div>
+        <div class="column" style="padding-top: 0px; padding-bottom: 30px">
+          <p style="text-align: center; font-size: 20px">Success Rate: <strong>DRP 75.5%</strong> | NeuralMP 19% | cuRobo 39.5%</p>
+        </div>
+
       </div>
-
-      <div class="columns">
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/se/cage.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Cage</p>
-        </div>
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/se/hybrid.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Hybrid</p>
-        </div>
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/se/microwave.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Microwave</p>
-        </div>
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/se/wallcabinet.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">wallcabinet</p>
-        </div>
-      </div>
-
-      <div class="column" style="padding-top: 0px; padding-bottom: 30px">
-        <p style="text-align: center; font-size: 20px">Success Rate: <strong>DRP 84.6%</strong> | NeuralMP 50.59% | cuRobo 82.97%</p>
-      </div>
-
-
-
-      <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>DRP on Suddenly Appearing Obstacle</strong></h3>
-      <h4 style="text-align: center; font-size: 20px; padding-bottom: 20px">Obstacles appear suddenly ahead of the robot, directly blocking its path and requiring dynamic trajectory adaptation. This tests the policy's ability to react to unexpected changes in the environment.</h4>
-      <div class="columns">
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/sao/final_sao_tabletop.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Level 1</p>
-        </div>
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/sao/final_sao_box.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Level 2</p>
-        </div>
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/sao/final_sao_hybrid.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Level 3</p>
-        </div>
-      </div>
-      <div class="column" style="padding-top: 0px; padding-bottom: 30px">
-        <p style="text-align: center; font-size: 20px">Success Rate: <strong>DRP 86%</strong> | NeuralMP 33.16% | cuRobo 59%</p>
-      </div>
-
-
-
-      <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>DRP on Goal Blocking</strong></h3>
-      <h4 style="text-align: center; font-size: 20px; padding-bottom: 20px">The goal is temporarily obstructed by an obstacle, and the robot must approach as closely as possible without colliding.</h4>
-      <div class="columns">
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/gb/final_gb_level1.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Level 1</p>
-        </div>
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/gb/final_gb_level2.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Level 2</p>
-        </div>
-      </div>
-      <div class="column" style="padding-top: 0px; padding-bottom: 30px">
-        <p style="text-align: center; font-size: 20px">Success Rate: <strong>DRP 66.67%</strong> | NeuralMP 0% | cuRobo 0%</p>
-      </div>
-
-
-
-      <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>DRP on Dynamic Goal Blocking</strong></h3>
-      <h4 style="text-align: center; font-size: 20px; padding-bottom: 20px">After reaching the goal, the robot encounters a moving obstacle and must avoid it before safely returning to the goal, testing its ability to remain reactive even after task completion.</h4>
-      <div class="columns">
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/dgb/final_dgb_level1.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Level 1</p>
-        </div>
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/dgb/final_dgb_level2.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Level 2</p>
-        </div>
-      </div>
-      <div class="columns">
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/dgb/final_dgb_level3.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Level 3</p>
-        </div>
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/dgb/final_dgb_level4.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Level 4</p>
-        </div>
-      </div>
-      <div class="column" style="padding-top: 0px; padding-bottom: 30px">
-        <p style="text-align: center; font-size: 20px">Success Rate: <strong>DRP 65.25%</strong> | NeuralMP 0.25% | cuRobo 3%</p>
-      </div>
-
-
-      <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>DRP on Floating Dynamic Obstacle</strong></h3>
-      <h4 style="text-align: center; font-size: 20px; padding-bottom: 20px">Obstacles move randomly throughout the environment, challenging the robot's reactivity and its ability to avoid collisions in real time.</h4>
-      <div class="columns">
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/fdo/final_fdo_level1_3obj.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Level 1</p>
-        </div>
-        <div class="column">
-          <video class="center" playsinline autoplay loop controls muted src="./static/videos/drpbench/fdo/final_fdo_level2_3obj.mp4" width="100%" style="border-radius:10px;"></video>
-          <p style="text-align: center; font-size: 18px">Level 2</p>
-        </div>
-      </div>
-      <div class="column" style="padding-top: 0px; padding-bottom: 30px">
-        <p style="text-align: center; font-size: 20px">Success Rate: <strong>DRP 75.5%</strong> | NeuralMP 19% | cuRobo 39.5%</p>
-      </div>
-
     </div>
   </div>
 </section>
@@ -522,75 +525,77 @@
             </div>
             <div class="column" style="padding-top: 0px; padding-bottom: 30px">
               <p style="text-align: center; font-size: 20px">Success Rate: <strong>DRP 90%</strong> | NeuralMP 30% | cuRobo-Voxels 60%</p>
-              <button onclick="toggleVideosSE()" id="expand-btn-baseline-se">Click to show baseline evaluations</button>
-              <script>
-                function toggleVideosSE() {
-                  const extra = document.getElementById('extra-videos-baseline-se');
-                  const btn = document.getElementById('expand-btn-baseline-se');
-                  const isHidden = extra.style.display === 'none';
-            
-                  extra.style.display = isHidden ? 'block' : 'none';
-                  btn.textContent = isHidden ? 'Click to hide baseline evaluations' : 'Click to show baseline evaluations';
-                }
-              </script>
-              <div id="extra-videos-baseline-se" style="display: none;">
-                <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>NeuralMP on Static Environments</strong></h3>
-                <div class="columns">
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_microwave.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">Microwave</p>
+              <div class="is-hidden-mobile">
+                <button onclick="toggleVideosSE()" id="expand-btn-baseline-se">Click to show baseline evaluations</button>
+                <script>
+                  function toggleVideosSE() {
+                    const extra = document.getElementById('extra-videos-baseline-se');
+                    const btn = document.getElementById('expand-btn-baseline-se');
+                    const isHidden = extra.style.display === 'none';
+              
+                    extra.style.display = isHidden ? 'block' : 'none';
+                    btn.textContent = isHidden ? 'Click to hide baseline evaluations' : 'Click to show baseline evaluations';
+                  }
+                </script>
+                <div id="extra-videos-baseline-se" style="display: none;">
+                  <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>NeuralMP on Static Environments</strong></h3>
+                  <div class="columns">
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_microwave.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">Microwave</p>
+                    </div>
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_drawer.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">Tall Drawer</p>
+                    </div>
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_cabinet_middle.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">Front Cabinet</p>
+                    </div>
                   </div>
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_drawer.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">Tall Drawer</p>
+                  <div class="columns">
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_cabinet_side.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">Side Cabinet</p>
+                    </div>
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_bookshelf.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">Slanted Shelf</p>
+                    </div>
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_kitchen.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">Kitchen Shelf</p>
+                    </div>
                   </div>
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_cabinet_middle.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">Front Cabinet</p>
-                  </div>
-                </div>
-                <div class="columns">
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_cabinet_side.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">Side Cabinet</p>
-                  </div>
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_bookshelf.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">Slanted Shelf</p>
-                  </div>
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_kitchen.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">Kitchen Shelf</p>
-                  </div>
-                </div>
 
-                <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>cuRobo-Voxels on Static Environments</strong></h3>
-                <div class="columns">
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_microwave.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">Microwave</p>
+                  <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>cuRobo-Voxels on Static Environments</strong></h3>
+                  <div class="columns">
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_microwave.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">Microwave</p>
+                    </div>
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_drawer.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">Tall Drawer</p>
+                    </div>
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_cabinet_middle.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">Front Cabinet</p>
+                    </div>
                   </div>
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_drawer.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">Tall Drawer</p>
-                  </div>
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_cabinet_middle.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">Front Cabinet</p>
-                  </div>
-                </div>
-                <div class="columns">
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_cabinet_side.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">Side Cabinet</p>
-                  </div>
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_bookshelf.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">Slanted Shelf</p>
-                  </div>
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_kitchen.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">Kitchen Shelf</p>
+                  <div class="columns">
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_cabinet_side.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">Side Cabinet</p>
+                    </div>
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_bookshelf.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">Slanted Shelf</p>
+                    </div>
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_kitchen.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">Kitchen Shelf</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -624,27 +629,29 @@
             </div>
             <div class="column" style="padding-top: 0px; padding-bottom: 30px">
               <p style="text-align: center; font-size: 20px">Success Rate: <strong>DRP 100%</strong> | NeuralMP 6.67% | cuRobo-Voxels 3.33%</p>
-              <button onclick="toggleVideosSAO()" id="expand-btn-baseline-sao">Click to show baseline evaluations</button>
-              <script>
-                function toggleVideosSAO() {
-                  const extra = document.getElementById('extra-videos-baseline-sao');
-                  const btn = document.getElementById('expand-btn-baseline-sao');
-                  const isHidden = extra.style.display === 'none';
-            
-                  extra.style.display = isHidden ? 'block' : 'none';
-                  btn.textContent = isHidden ? 'Click to hide baseline evaluations' : 'Click to show baseline evaluations';
-                }
-              </script>
-              <div id="extra-videos-baseline-sao" style="display: none;">
-                <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>Baselines on Suddenly Appearing Obstacle</strong></h3>
-                <div class="columns">
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_SAO.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">NeuralMP</p>
-                  </div>
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_SAO.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">cuRobo-Voxels</p>
+              <div class="is-hidden-mobile">
+                <button onclick="toggleVideosSAO()" id="expand-btn-baseline-sao">Click to show baseline evaluations</button>
+                <script>
+                  function toggleVideosSAO() {
+                    const extra = document.getElementById('extra-videos-baseline-sao');
+                    const btn = document.getElementById('expand-btn-baseline-sao');
+                    const isHidden = extra.style.display === 'none';
+              
+                    extra.style.display = isHidden ? 'block' : 'none';
+                    btn.textContent = isHidden ? 'Click to hide baseline evaluations' : 'Click to show baseline evaluations';
+                  }
+                </script>
+                <div id="extra-videos-baseline-sao" style="display: none;">
+                  <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>Baselines on Suddenly Appearing Obstacle</strong></h3>
+                  <div class="columns">
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_SAO.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">NeuralMP</p>
+                    </div>
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_SAO.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">cuRobo-Voxels</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -679,27 +686,30 @@
             </div>
             <div class="column" style="padding-top: 0px; padding-bottom: 30px">
               <p style="text-align: center; font-size: 20px">Success Rate: <strong>DRP 92.86%</strong> | NeuralMP 0% | cuRobo-Voxels 0%</p>
-              <button onclick="toggleVideosGB()" id="expand-btn-baseline-gb">Click to show baseline evaluations</button>
-              <script>
-                function toggleVideosGB() {
-                  const extra = document.getElementById('extra-videos-baseline-gb');
-                  const btn = document.getElementById('expand-btn-baseline-gb');
-                  const isHidden = extra.style.display === 'none';
-            
-                  extra.style.display = isHidden ? 'block' : 'none';
-                  btn.textContent = isHidden ? 'Click to hide baseline evaluations' : 'Click to show baseline evaluations';
-                }
-              </script>
-              <div id="extra-videos-baseline-gb" style="display: none;">
-                <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>Baselines on Goal Blocking</strong></h3>
-                <div class="columns">
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_GB.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">NeuralMP</p>
-                  </div>
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_GB.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">cuRobo-Voxels</p>
+
+              <div class="is-hidden-mobile">
+                <button onclick="toggleVideosGB()" id="expand-btn-baseline-gb">Click to show baseline evaluations</button>
+                <script>
+                  function toggleVideosGB() {
+                    const extra = document.getElementById('extra-videos-baseline-gb');
+                    const btn = document.getElementById('expand-btn-baseline-gb');
+                    const isHidden = extra.style.display === 'none';
+              
+                    extra.style.display = isHidden ? 'block' : 'none';
+                    btn.textContent = isHidden ? 'Click to hide baseline evaluations' : 'Click to show baseline evaluations';
+                  }
+                </script>
+                <div id="extra-videos-baseline-gb" style="display: none;">
+                  <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>Baselines on Goal Blocking</strong></h3>
+                  <div class="columns">
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_GB.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">NeuralMP</p>
+                    </div>
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_GB.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">cuRobo-Voxels</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -733,27 +743,30 @@
             </div>
             <div class="column" style="padding-top: 0px; padding-bottom: 30px">
               <p style="text-align: center; font-size: 20px">Success Rate: <strong>DRP 93.33%</strong> | NeuralMP 0% | cuRobo-Voxels 0%</p>
-              <button onclick="toggleVideosDGB()" id="expand-btn-baseline-dgb">Click to show baseline evaluations</button>
-              <script>
-                function toggleVideosDGB() {
-                  const extra = document.getElementById('extra-videos-baseline-dgb');
-                  const btn = document.getElementById('expand-btn-baseline-dgb');
-                  const isHidden = extra.style.display === 'none';
-            
-                  extra.style.display = isHidden ? 'block' : 'none';
-                  btn.textContent = isHidden ? 'Click to hide baseline evaluations' : 'Click to show baseline evaluations';
-                }
-              </script>
-              <div id="extra-videos-baseline-dgb" style="display: none;">
-                <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>Baselines on Dynamic Goal Blocking</strong></h3>
-                <div class="columns">
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_DGB.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">NeuralMP</p>
-                  </div>
-                  <div class="column">
-                    <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_DGB.mp4" width="100%" style="border-radius:10px;"></video>
-                    <p style="text-align: center; font-size: 18px">cuRobo-Voxels</p>
+
+              <div class="is-hidden-mobile">
+                <button onclick="toggleVideosDGB()" id="expand-btn-baseline-dgb">Click to show baseline evaluations</button>
+                <script>
+                  function toggleVideosDGB() {
+                    const extra = document.getElementById('extra-videos-baseline-dgb');
+                    const btn = document.getElementById('expand-btn-baseline-dgb');
+                    const isHidden = extra.style.display === 'none';
+              
+                    extra.style.display = isHidden ? 'block' : 'none';
+                    btn.textContent = isHidden ? 'Click to hide baseline evaluations' : 'Click to show baseline evaluations';
+                  }
+                </script>
+                <div id="extra-videos-baseline-dgb" style="display: none;">
+                  <h3 class="title is-4" style="text-align: center; padding-top: 15px;"><strong>Baselines on Dynamic Goal Blocking</strong></h3>
+                  <div class="columns">
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/nmp_DGB.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">NeuralMP</p>
+                    </div>
+                    <div class="column">
+                      <video class="center" playsinline autoplay loop controls muted src="./static/videos/rweval/baselines/curobo_DGB.mp4" width="100%" style="border-radius:10px;"></video>
+                      <p style="text-align: center; font-size: 18px">cuRobo-Voxels</p>
+                    </div>
                   </div>
                 </div>
               </div>
